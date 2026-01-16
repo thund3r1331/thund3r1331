@@ -4,10 +4,6 @@
 </p>
 
 <p align="center">
-  <img alt="Статус" src="https://img.shields.io/badge/Статус-%D0%BD%D0%B5_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-red?style=flat-square" />
-</p>
-
-<p align="center">
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
   <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
@@ -22,5 +18,5 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/thund3r1331"><img src="https://github-readme-stats.vercel.app/api?username=thund3r1331&show_icons=true&theme=radical" alt="github stats" /></a>
+  <small>Больше информации в репозиториях — ссылки внутри профиля ⤵️</small>
 </p>
