@@ -17,6 +17,3 @@
   <img alt="C#" src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c%23&logoColor=white" />
 </p>
 
-<p align="center">
-  <small>Больше информации в репозиториях - ссылки внутри профиля ⤵️</small>
-</p>
