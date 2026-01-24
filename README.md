@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=3776AB&center=true&vCenter=true&width=435&lines=Full+Stack+Developer;Arch+Linux+Enthusiast;Python+%26+JS+Expert;Always+Learning..." alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=3776AB&center=true&vCenter=true&width=435&lines=Frontend+Designer;Arch+Linux+Enthusiast;3D+Modeller;Rust-lang+Junior;Always+Learning..." alt="Typing SVG" />
   </a>
 </p>
 
@@ -23,5 +23,5 @@
 
 | Languages | Frameworks | Tools & OS |
 | :---: | :---: | :---: |
-| <img src="https://skillicons.dev/icons?i=py,ts,js,kotlin,java,cs" /> | <img src="https://skillicons.dev/icons?i=react,nodejs" /> | <img src="https://skillicons.dev/icons?i=docker,arch,ubuntu" /> |
+| <img src="https://skillicons.dev/icons?i=py,js,kotlin,java,rust" /> | <img src="https://skillicons.dev/icons?i=nodejs" /> | <img src="https://skillicons.dev/icons?i=windows,arch,ubuntu" /> |
 
