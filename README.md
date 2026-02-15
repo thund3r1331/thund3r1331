@@ -23,5 +23,5 @@
 
 | Languages | Frameworks | Tools & OS |
 | :---: | :---: | :---: |
-| <img src="https://skillicons.dev/icons?i=py,js,kotlin,java,rust" /> | <img src="https://skillicons.dev/icons?i=nodejs" /> | <img src="https://skillicons.dev/icons?i=windows,arch,ubuntu" /> |
+| <img src="https://skillicons.dev/icons?i=py,js,java,rust" /> | <img src="https://skillicons.dev/icons?i=nodejs" /> | <img src="https://skillicons.dev/icons?i=windows,arch,ubuntu" /> |
 
