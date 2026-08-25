@@ -1,82 +1,231 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="100%" height="100%">
   <defs>
     <!-- Dark Void Background -->
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#08080a" />
-      <stop offset="50%" stop-color="#0c0d12" />
-      <stop offset="100%" stop-color="#060608" />
+      <stop offset="0%" stop-color="#060608" />
+      <stop offset="50%" stop-color="#0b0c10" />
+      <stop offset="100%" stop-color="#040406" />
     </linearGradient>
 
-    <!-- Subtle Radial Glow -->
-    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05" />
-      <stop offset="50%" stop-color="#ce422b" stop-opacity="0.04" />
+    <!-- Subtle Glows -->
+    <radialGradient id="topGlow" cx="50%" cy="15%" r="45%">
+      <stop offset="0%" stop-color="#ce422b" stop-opacity="0.14" />
+      <stop offset="60%" stop-color="#3b82f6" stop-opacity="0.04" />
       <stop offset="100%" stop-color="#000000" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Scanlines -->
+    <radialGradient id="cardGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Scanline Pattern -->
     <pattern id="scanlines" width="100%" height="4" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="1200" y2="0" stroke="#000000" stroke-width="2" opacity="0.35" />
+      <line x1="0" y1="0" x2="1200" y2="0" stroke="#000000" stroke-width="2" opacity="0.4" />
       <line x1="0" y1="2" x2="1200" y2="2" stroke="#ffffff" stroke-width="0.5" opacity="0.02" />
     </pattern>
 
-    <!-- Minimal Grid -->
+    <!-- Wireframe Grid -->
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
       <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(255, 255, 255, 0.02)" stroke-width="0.75" />
       <circle cx="0" cy="0" r="0.75" fill="rgba(255,255,255,0.06)" />
     </pattern>
   </defs>
 
-  <!-- Background Layers -->
-  <rect width="1200" height="320" fill="url(#bg)" />
-  <rect width="1200" height="320" fill="url(#grid)" />
-  <rect width="1200" height="320" fill="url(#centerGlow)" />
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+    .serif { font-family: 'Cinzel', 'Times New Roman', 'Georgia', serif; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .card-hover { transition: transform 0.2s ease; cursor: pointer; }
+    .card-hover:hover { filter: brightness(1.15); }
+  </style>
 
-  <!-- Minimal Gothic / Wing Accent Watermark -->
-  <g transform="translate(600, 160) scale(1.8)" opacity="0.03" fill="#ffffff">
+  <!-- Background Base -->
+  <rect width="1200" height="820" fill="url(#bg)" />
+  <rect width="1200" height="820" fill="url(#grid)" />
+  <rect width="1200" height="820" fill="url(#topGlow)" />
+
+  <!-- Angel Wing Watermark Background (Matching Avatar) -->
+  <g transform="translate(600, 380) scale(3.5)" opacity="0.025" fill="#ffffff">
     <path d="M-10,-20 C-40,-70 -120,-80 -180,-40 C-140,-10 -90,20 -40,30 C-30,10 -20,0 -10,-20 Z" />
     <path d="M10,-20 C40,-70 120,-80 180,-40 C140,-10 90,20 40,30 C30,10 20,0 10,-20 Z" />
-    <line x1="0" y1="-50" x2="0" y2="45" stroke="#ffffff" stroke-width="2.5" />
-    <line x1="-25" y1="-20" x2="25" y2="-20" stroke="#ffffff" stroke-width="2.5" />
+    <circle cx="0" cy="-55" r="12" fill="none" stroke="#ffffff" stroke-width="2" />
+    <line x1="0" y1="-45" x2="0" y2="40" stroke="#ffffff" stroke-width="2.5" />
+    <line x1="-22" y1="-15" x2="22" y2="-15" stroke="#ffffff" stroke-width="2.5" />
   </g>
 
-  <!-- Minimal Framing Brackets & Metadata -->
-  <g font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="10" fill="rgba(255, 255, 255, 0.25)" letter-spacing="1.5">
-    <!-- Top Left -->
-    <path d="M 35 45 L 35 30 L 50 30" stroke="rgba(255,255,255,0.15)" fill="none" stroke-width="1.2" />
-    <text x="60" y="38">THUND3R.XYZ</text>
+  <!-- Outer Framing Corners -->
+  <g stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.2" fill="none" class="mono" font-size="10" letter-spacing="2">
+    <!-- Top-Left -->
+    <path d="M 40 50 L 40 30 L 60 30" />
+    <text x="75" y="38" fill="rgba(255,255,255,0.3)" stroke="none">THUND3R.XYZ</text>
 
-    <!-- Top Right -->
-    <path d="M 1165 45 L 1165 30 L 1150 30" stroke="rgba(255,255,255,0.15)" fill="none" stroke-width="1.2" />
-    <text x="1090" y="38">ARCHIVE</text>
+    <!-- Top-Right -->
+    <path d="M 1160 50 L 1160 30 L 1140 30" />
+    <text x="1060" y="38" fill="rgba(255,255,255,0.3)" stroke="none">01 // ARCHIVE</text>
 
-    <!-- Bottom Left -->
-    <path d="M 35 275 L 35 290 L 50 290" stroke="rgba(255,255,255,0.15)" fill="none" stroke-width="1.2" />
-    <text x="60" y="286">DEV // SYSTEMS</text>
+    <!-- Bottom-Left -->
+    <path d="M 40 770 L 40 790 L 60 790" />
+    <text x="75" y="786" fill="rgba(206,66,43,0.7)" stroke="none">DEV // SYSTEMS</text>
 
-    <!-- Bottom Right -->
-    <path d="M 1165 275 L 1165 290 L 1150 290" stroke="rgba(255,255,255,0.15)" fill="none" stroke-width="1.2" />
-    <text x="1080" y="286">2026.08</text>
+    <!-- Bottom-Right -->
+    <path d="M 1160 770 L 1160 790 L 1140 790" />
+    <text x="1080" y="786" fill="rgba(255,255,255,0.3)" stroke="none">2026.08</text>
   </g>
 
-  <!-- Clean Center Hero Typography -->
-  <g text-anchor="middle">
-    <!-- Chromatic Red Offset (Subtle glitch) -->
-    <text x="601" y="166" font-family="'JetBrains Mono', 'Fira Code', -apple-system, monospace" font-size="56" font-weight="900" fill="#ce422b" opacity="0.2" letter-spacing="12">
+  <!-- SECTION 1: HERO HEADER -->
+  <g text-anchor="middle" transform="translate(600, 110)">
+    <!-- Subtle Chromatic Red Glitch Offset -->
+    <text x="1" y="2" class="mono" font-size="64" font-weight="900" fill="#ce422b" opacity="0.25" letter-spacing="14">
       thund3r
     </text>
 
-    <!-- Main Clean Typography -->
-    <text x="600" y="165" font-family="'JetBrains Mono', 'Fira Code', -apple-system, monospace" font-size="56" font-weight="900" fill="#f8fafc" letter-spacing="12">
+    <!-- Main Title -->
+    <text x="0" y="0" class="mono" font-size="64" font-weight="900" fill="#f8fafc" letter-spacing="14">
       thund3r
     </text>
 
-    <!-- Sharp Monospaced Subtitle -->
-    <text x="600" y="205" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" font-weight="500" fill="rgba(255, 255, 255, 0.4)" letter-spacing="4">
-      RUST • TAURI • TYPESCRIPT • DESKTOP
+    <!-- Subtitle / Stacks -->
+    <text x="0" y="44" class="mono" font-size="11" font-weight="500" fill="rgba(255, 255, 255, 0.4)" letter-spacing="5">
+      RUST • TAURI • TYPESCRIPT • DESKTOP &amp; SYSTEMS
     </text>
   </g>
 
-  <!-- Scanlines Overlay -->
-  <rect width="1200" height="320" fill="url(#scanlines)" pointer-events="none" />
+  <!-- Distressed Divider -->
+  <line x1="80" y1="190" x2="1120" y2="190" stroke="rgba(255, 255, 255, 0.08)" stroke-dasharray="4 8" />
+
+  <!-- SECTION 2: PROJECTS CARDS -->
+  <!-- Header Label -->
+  <g transform="translate(80, 230)" class="mono">
+    <text x="0" y="0" font-size="11" font-weight="700" fill="rgba(255, 255, 255, 0.5)" letter-spacing="2">01 // FEATURED PROJECTS</text>
+  </g>
+
+  <!-- Card 1: ChromaDrop -->
+  <a href="https://github.com/thund3r1331/chromadrop" target="_blank">
+    <g transform="translate(80, 250)" class="card-hover">
+      <!-- Card Box -->
+      <rect width="505" height="175" rx="14" fill="#0d0e14" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+      <rect width="505" height="175" rx="14" fill="url(#cardGlow)" />
+
+      <!-- Accent Top Border -->
+      <path d="M 0 14 Q 0 0 14 0 L 491 0 Q 505 0 505 14 L 505 4 L 0 4 Z" fill="#ce422b" />
+
+      <!-- Card Title & Icon -->
+      <text x="28" y="42" class="sans" font-size="18" font-weight="800" fill="#ffffff">🎨 ChromaDrop</text>
+      <rect x="420" y="24" width="60" height="20" rx="4" fill="rgba(206,66,43,0.15)" stroke="rgba(206,66,43,0.4)" stroke-width="1" />
+      <text x="430" y="38" class="mono" font-size="10" font-weight="700" fill="#ff7a5c">v1.2.0</text>
+
+      <!-- Description -->
+      <text x="28" y="75" class="sans" font-size="12" fill="rgba(255, 255, 255, 0.65)">
+        Ultra-fast desktop eyedropper, OKLCH converter,
+      </text>
+      <text x="28" y="95" class="sans" font-size="12" fill="rgba(255, 255, 255, 0.65)">
+        WCAG 2.1 inspector &amp; gradient studio.
+      </text>
+
+      <!-- Tech Badges -->
+      <g transform="translate(28, 130)" class="mono" font-size="10">
+        <rect x="0" y="0" width="70" height="22" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" />
+        <text x="10" y="15" fill="#94a3b8">Tauri v2</text>
+
+        <rect x="78" y="0" width="50" height="22" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" />
+        <text x="88" y="15" fill="#dea584">Rust</text>
+
+        <rect x="136" y="0" width="55" height="22" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" />
+        <text x="146" y="15" fill="#4fc08d">Vue 3</text>
+
+        <rect x="199" y="0" width="65" height="22" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" />
+        <text x="209" y="15" fill="#38b2ac">Tailwind</text>
+      </g>
+    </g>
+  </a>
+
+  <!-- Card 2: weather-cli -->
+  <a href="https://github.com/thund3r1331/weather-cli" target="_blank">
+    <g transform="translate(615, 250)" class="card-hover">
+      <!-- Card Box -->
+      <rect width="505" height="175" rx="14" fill="#0d0e14" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+      <rect width="505" height="175" rx="14" fill="url(#cardGlow)" />
+
+      <!-- Accent Top Border -->
+      <path d="M 0 14 Q 0 0 14 0 L 491 0 Q 505 0 505 14 L 505 4 L 0 4 Z" fill="#38bdf8" />
+
+      <!-- Card Title & Icon -->
+      <text x="28" y="42" class="sans" font-size="18" font-weight="800" fill="#ffffff">⛅ weather-cli</text>
+      <rect x="420" y="24" width="60" height="20" rx="4" fill="rgba(56,189,248,0.15)" stroke="rgba(56,189,248,0.4)" stroke-width="1" />
+      <text x="435" y="38" class="mono" font-size="10" font-weight="700" fill="#7dd3fc">CLI</text>
+
+      <!-- Description -->
+      <text x="28" y="75" class="sans" font-size="12" fill="rgba(255, 255, 255, 0.65)">
+        Minimalist terminal weather station with real-time
+      </text>
+      <text x="28" y="95" class="sans" font-size="12" fill="rgba(255, 255, 255, 0.65)">
+        WMO code decoding, ASCII art &amp; ANSI styling.
+      </text>
+
+      <!-- Tech Badges -->
+      <g transform="translate(28, 130)" class="mono" font-size="10">
+        <rect x="0" y="0" width="70" height="22" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" />
+        <text x="10" y="15" fill="#68a063">Node.js</text>
+
+        <rect x="78" y="0" width="85" height="22" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" />
+        <text x="88" y="15" fill="#38bdf8">Open-Meteo</text>
+
+        <rect x="171" y="0" width="65" height="22" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" />
+        <text x="181" y="15" fill="#facc15">Terminal</text>
+      </g>
+    </g>
+  </a>
+
+  <!-- SECTION 3: CODE TERMINAL BLOCK -->
+  <g transform="translate(80, 465)">
+    <text x="0" y="0" class="mono" font-size="11" font-weight="700" fill="rgba(255, 255, 255, 0.5)" letter-spacing="2">02 // PROFILE SPEC</text>
+
+    <!-- Terminal Box -->
+    <g transform="translate(0, 18)">
+      <rect width="1040" height="250" rx="12" fill="#090a0f" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+      
+      <!-- Window Controls -->
+      <path d="M 0 12 Q 0 0 12 0 L 1028 0 Q 1040 0 1040 12 L 1040 36 L 0 36 Z" fill="#101118" />
+      <line x1="0" y1="36" x2="1040" y2="36" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+
+      <circle cx="22" cy="18" r="5" fill="#ef4444" opacity="0.6" />
+      <circle cx="38" cy="18" r="5" fill="#f59e0b" opacity="0.6" />
+      <circle cx="54" cy="18" r="5" fill="#10b981" opacity="0.6" />
+      <text x="80" y="22" class="mono" font-size="10" fill="rgba(255,255,255,0.3)">main.rs</text>
+
+      <!-- Rust Code Syntax -->
+      <g transform="translate(28, 65)" class="mono" font-size="12" line-height="22">
+        <text x="0" y="0">
+          <tspan fill="#ce422b">struct</tspan> <tspan fill="#f8fafc">Profile</tspan> <tspan fill="#94a3b8">{</tspan>
+        </text>
+        <text x="24" y="26">
+          <tspan fill="#e2e8f0">alias</tspan><tspan fill="#94a3b8">:</tspan> <tspan fill="#38bdf8">&amp;'static str</tspan><tspan fill="#94a3b8">,</tspan>
+        </text>
+        <text x="24" y="52">
+          <tspan fill="#e2e8f0">focus</tspan><tspan fill="#94a3b8">:</tspan> <tspan fill="#dea584">Vec</tspan><tspan fill="#94a3b8">&lt;</tspan><tspan fill="#38bdf8">&amp;'static str</tspan><tspan fill="#94a3b8">&gt;,</tspan>
+        </text>
+        <text x="24" y="78">
+          <tspan fill="#e2e8f0">stack</tspan><tspan fill="#94a3b8">:</tspan> <tspan fill="#dea584">Vec</tspan><tspan fill="#94a3b8">&lt;</tspan><tspan fill="#38bdf8">&amp;'static str</tspan><tspan fill="#94a3b8">&gt;,</tspan>
+        </text>
+        <text x="0" y="104">
+          <tspan fill="#94a3b8">}</tspan>
+        </text>
+
+        <text x="0" y="136">
+          <tspan fill="#ce422b">let</tspan> <tspan fill="#f8fafc">thund3r</tspan> <tspan fill="#94a3b8">=</tspan> <tspan fill="#f8fafc">Profile</tspan> <tspan fill="#94a3b8">{</tspan>
+        </text>
+        <text x="24" y="158">
+          <tspan fill="#e2e8f0">alias</tspan><tspan fill="#94a3b8">:</tspan> <tspan fill="#a3e635">"thund3r"</tspan><tspan fill="#94a3b8">,</tspan>
+          <tspan fill="#e2e8f0" dx="20">focus</tspan><tspan fill="#94a3b8">:</tspan> <tspan fill="#dea584">vec!</tspan><tspan fill="#94a3b8">[</tspan><tspan fill="#a3e635">"Desktop Apps"</tspan><tspan fill="#94a3b8">, </tspan><tspan fill="#a3e635">"Rust Tooling"</tspan><tspan fill="#94a3b8">, </tspan><tspan fill="#a3e635">"Web Systems"</tspan><tspan fill="#94a3b8">],</tspan>
+        </text>
+        <text x="0" y="178">
+          <tspan fill="#94a3b8">};</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- CRT Scanlines Full Overlay -->
+  <rect width="1200" height="820" fill="url(#scanlines)" pointer-events="none" />
 </svg>
