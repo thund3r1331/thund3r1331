@@ -1,20 +1,21 @@
 <div align="center">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,20,30&height=180&section=header&text=thund3r1331&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=systems%20•%20desktop%20tools%20•%20creative%20code&descAlignY=60&descAlign=50" width="100%"/>
-
-  <p align="center">
-    <strong>Crafting fast desktop tools, systems software & modern web experiments.</strong>
+  <h1>Hey, I'm thund3r ⚡</h1>
+  
+  <p>
+    <strong>Building fast desktop applications, Rust tooling & modern web experiments.</strong>
   </p>
 
-  <p align="center">
-    <img src="https://img.shields.io/badge/Rust-DEA584?style=for-the-badge&logo=rust&logoColor=black" alt="Rust" />
-    <img src="https://img.shields.io/badge/Tauri_v2-24C8D8?style=for-the-badge&logo=tauri&logoColor=white" alt="Tauri" />
-    <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue" />
-    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
-  </p>
+  <br/>
+
+  <!-- Трендовые неоновые иконки технологий -->
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=rust,ts,vue,tauri,tailwind,nodejs,html,css,git,linux,vscode&theme=dark" alt="My Skills" />
+  </a>
 
 </div>
+
+<br/>
 
 ---
 
@@ -45,9 +46,7 @@
 
 ---
 
-### 🛠️ Tech & Tooling
-
-<div align="center">
+### 🛠️ About Me
 
 ```rust
 struct Developer {
