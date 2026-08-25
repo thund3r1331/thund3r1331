@@ -46,14 +46,10 @@ let thund3r = Profile {
 
 ---
 
-### 03 // Activity
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=thund3r1331&theme=tokyonight&background=070709&border=1A1C23&stroke=1A1C23&ring=CE422B&fire=CE422B&currStreakLabel=CE422B&sideNums=E2E8F0&sideLabels=94A3B8&dates=64748B" alt="GitHub Streak" width="95%" />
-</div>
-
 <br/>
 
 <div align="center">
+  <img src="https://img.shields.io/badge/status-active-ce422b?style=flat-square" alt="Status" />
+  <img src="https://img.shields.io/badge/focus-systems%20%26%20tools-1a1c23?style=flat-square" alt="Focus" />
   <img src="https://komarev.com/ghpvc/?username=thund3r1331&label=visitors&color=ce422b&style=flat-square" alt="Visitors" />
 </div>
