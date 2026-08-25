@@ -1,79 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 160" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 170" width="100%" height="100%">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="cardBgW" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c0d14" />
-      <stop offset="50%" stop-color="#08090d" />
-      <stop offset="100%" stop-color="#050507" />
+    <!-- Dark Void Gradient -->
+    <linearGradient id="gothBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050507" />
+      <stop offset="50%" stop-color="#090a0f" />
+      <stop offset="100%" stop-color="#040406" />
     </linearGradient>
 
-    <!-- Cyan Accent Glow -->
-    <radialGradient id="glowCyan" cx="0%" cy="0%" r="70%">
-      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.18" />
+    <!-- Ghostly Blue Void Glow -->
+    <radialGradient id="gothGlow2" cx="20%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.14" />
       <stop offset="100%" stop-color="#000000" stop-opacity="0" />
     </radialGradient>
 
     <!-- Scanline Pattern -->
-    <pattern id="scanlinesW" width="100%" height="4" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="800" y2="0" stroke="#000000" stroke-width="2" opacity="0.3" />
-      <line x1="0" y1="2" x2="800" y2="2" stroke="#ffffff" stroke-width="0.5" opacity="0.015" />
+    <pattern id="scanlinesG2" width="100%" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="800" y2="0" stroke="#000000" stroke-width="2" opacity="0.35" />
+      <line x1="0" y1="2" x2="800" y2="2" stroke="#ffffff" stroke-width="0.5" opacity="0.02" />
     </pattern>
 
-    <!-- Micro Grid -->
-    <pattern id="gridW" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255, 255, 255, 0.018)" stroke-width="0.7" />
+    <!-- Wire Grid -->
+    <pattern id="gridG2" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(255, 255, 255, 0.02)" stroke-width="0.75" />
     </pattern>
   </defs>
 
-  <!-- Card Frame -->
-  <rect width="800" height="160" rx="12" fill="url(#cardBgW)" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1.2" />
-  <rect width="800" height="160" rx="12" fill="url(#gridW)" />
-  <rect width="800" height="160" rx="12" fill="url(#glowCyan)" />
+  <!-- Background Base -->
+  <rect width="800" height="170" fill="url(#gothBg2)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+  <rect width="800" height="170" fill="url(#gridG2)" />
+  <rect width="800" height="170" fill="url(#gothGlow2)" />
 
-  <!-- Left Accent Stripe -->
-  <path d="M 0 12 Q 0 0 12 0 L 12 0 L 12 160 L 12 160 Q 0 160 0 148 Z" fill="#38bdf8" />
+  <!-- Gothic Wing & Cross Watermark Background -->
+  <g transform="translate(710, 85) scale(1.4)" opacity="0.04" fill="#ffffff">
+    <path d="M-10,-20 C-40,-70 -120,-80 -180,-40 C-140,-10 -90,20 -40,30 C-30,10 -20,0 -10,-20 Z" />
+    <path d="M10,-20 C40,-70 120,-80 180,-40 C140,-10 90,20 40,30 C30,10 20,0 10,-20 Z" />
+    <circle cx="0" cy="-55" r="10" fill="none" stroke="#ffffff" stroke-width="2" />
+    <line x1="0" y1="-45" x2="0" y2="40" stroke="#ffffff" stroke-width="2" />
+    <line x1="-20" y1="-15" x2="20" y2="-15" stroke="#ffffff" stroke-width="2" />
+  </g>
 
-  <!-- Background Watermark Symbol -->
-  <g transform="translate(720, 95) rotate(10)" opacity="0.035" fill="#38bdf8">
-    <path d="M0,0 C20,-30 60,-40 100,-30 C80,-10 70,10 60,30 C45,15 30,5 0,0 Z" transform="scale(1.5)" />
+  <!-- Sharp Gothic Framing Corners -->
+  <g stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.2" fill="none" font-family="'JetBrains Mono', monospace" font-size="8.5" letter-spacing="1.5">
+    <!-- Top-Left -->
+    <path d="M 18 28 L 18 16 L 30 16" />
+    <text x="36" y="22" fill="rgba(255,255,255,0.3)" stroke="none">RELIC.02</text>
+
+    <!-- Top-Right -->
+    <path d="M 782 28 L 782 16 L 770 16" />
+    <text x="705" y="22" fill="rgba(56,189,248,0.7)" stroke="none">[ CLI ]</text>
+
+    <!-- Bottom-Left -->
+    <path d="M 18 142 L 18 154 L 30 154" />
+    <text x="36" y="152" fill="rgba(255,255,255,0.25)" stroke="none">0x38BDF8</text>
+
+    <!-- Bottom-Right -->
+    <path d="M 782 142 L 782 154 L 770 154" />
+    <text x="705" y="152" fill="rgba(255,255,255,0.25)" stroke="none">ARCHIVE</text>
   </g>
 
   <!-- Card Content -->
   <g transform="translate(36, 0)">
-    <!-- Header: Title + Tag -->
-    <g transform="translate(0, 42)">
-      <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff" letter-spacing="-0.3">
-        ⛅ weather-cli
+    <!-- Title with Gothic Cross and Cyan Chromatic Glitch -->
+    <g transform="translate(0, 56)">
+      <!-- Glitch Cyan Offset -->
+      <text font-family="'JetBrains Mono', 'Cinzel', serif, monospace" font-size="20" font-weight="900" fill="#38bdf8" opacity="0.35" letter-spacing="4">
+        † WEATHER-CLI
       </text>
-
-      <!-- CLI Badge -->
-      <g transform="translate(165, -16)">
-        <rect width="45" height="20" rx="4" fill="rgba(56, 189, 248, 0.15)" stroke="rgba(56, 189, 248, 0.45)" stroke-width="1" />
-        <text x="22.5" y="14" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#7dd3fc" text-anchor="middle">CLI</text>
-      </g>
+      <!-- Main Title -->
+      <text x="-1" y="-1" font-family="'JetBrains Mono', 'Cinzel', serif, monospace" font-size="20" font-weight="900" fill="#f8fafc" letter-spacing="4">
+        † WEATHER-CLI
+      </text>
     </g>
 
-    <!-- Description -->
-    <text x="0" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="rgba(255, 255, 255, 0.7)">
-      Lightweight terminal weather client with real-time WMO decoding, ASCII art &amp; ANSI styling.
+    <!-- Gothic Subtitle -->
+    <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="rgba(255, 255, 255, 0.4)" letter-spacing="2">
+      [ TERMINAL METEO CLIENT // WMO DECODER // ASCII ART ]
     </text>
 
-    <!-- Tech Badges -->
-    <g transform="translate(0, 110)" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10.5">
-      <!-- Node.js Badge -->
-      <rect x="0" y="0" width="76" height="24" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.09)" />
-      <text x="12" y="16" fill="#68a063">Node.js</text>
+    <!-- Description -->
+    <text x="0" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="rgba(255, 255, 255, 0.65)">
+      Lightweight terminal weather station with real-time ANSI forecasts.
+    </text>
 
-      <!-- Open-Meteo Badge -->
-      <rect x="84" y="0" width="94" height="24" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.09)" />
-      <text x="95" y="16" fill="#38bdf8">Open-Meteo</text>
+    <!-- Monospaced Boxed Tech Tags -->
+    <g transform="translate(0, 124)" font-family="'JetBrains Mono', monospace" font-size="9.5" letter-spacing="1">
+      <rect x="0" y="0" width="82" height="20" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+      <text x="10" y="14" fill="#68a063">NODE.JS</text>
 
-      <!-- Terminal Badge -->
-      <rect x="186" y="0" width="76" height="24" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.09)" />
-      <text x="198" y="16" fill="#facc15">Terminal</text>
+      <rect x="90" y="0" width="102" height="20" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+      <text x="100" y="14" fill="#38bdf8">OPEN-METEO</text>
+
+      <rect x="200" y="0" width="86" height="20" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+      <text x="210" y="14" fill="#facc15">TERMINAL</text>
+
+      <rect x="294" y="0" width="62" height="20" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+      <text x="304" y="14" fill="#cbd5e1">ASCII</text>
     </g>
   </g>
 
   <!-- Scanlines Overlay -->
-  <rect width="800" height="160" rx="12" fill="url(#scanlinesW)" pointer-events="none" />
+  <rect width="800" height="170" fill="url(#scanlinesG2)" pointer-events="none" />
 </svg>

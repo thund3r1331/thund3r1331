@@ -1,84 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 160" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 170" width="100%" height="100%">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c0d14" />
-      <stop offset="50%" stop-color="#08090d" />
-      <stop offset="100%" stop-color="#050507" />
+    <!-- Dark Void Gradient -->
+    <linearGradient id="gothBg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050507" />
+      <stop offset="50%" stop-color="#090a0f" />
+      <stop offset="100%" stop-color="#040406" />
     </linearGradient>
 
-    <!-- Red Accent Glow -->
-    <radialGradient id="glowRed" cx="0%" cy="0%" r="70%">
-      <stop offset="0%" stop-color="#ce422b" stop-opacity="0.18" />
+    <!-- Crimson Void Glow -->
+    <radialGradient id="gothGlow1" cx="20%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ce422b" stop-opacity="0.14" />
       <stop offset="100%" stop-color="#000000" stop-opacity="0" />
     </radialGradient>
 
     <!-- Scanline Pattern -->
-    <pattern id="scanlines" width="100%" height="4" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="800" y2="0" stroke="#000000" stroke-width="2" opacity="0.3" />
-      <line x1="0" y1="2" x2="800" y2="2" stroke="#ffffff" stroke-width="0.5" opacity="0.015" />
+    <pattern id="scanlinesG1" width="100%" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="800" y2="0" stroke="#000000" stroke-width="2" opacity="0.35" />
+      <line x1="0" y1="2" x2="800" y2="2" stroke="#ffffff" stroke-width="0.5" opacity="0.02" />
     </pattern>
 
-    <!-- Micro Grid -->
-    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255, 255, 255, 0.018)" stroke-width="0.7" />
+    <!-- Wire Grid -->
+    <pattern id="gridG1" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(255, 255, 255, 0.02)" stroke-width="0.75" />
     </pattern>
   </defs>
 
-  <!-- Card Frame -->
-  <rect width="800" height="160" rx="12" fill="url(#cardBg)" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1.2" />
-  <rect width="800" height="160" rx="12" fill="url(#grid)" />
-  <rect width="800" height="160" rx="12" fill="url(#glowRed)" />
+  <!-- Background Base -->
+  <rect width="800" height="170" fill="url(#gothBg1)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+  <rect width="800" height="170" fill="url(#gridG1)" />
+  <rect width="800" height="170" fill="url(#gothGlow1)" />
 
-  <!-- Left Accent Accent Stripe -->
-  <path d="M 0 12 Q 0 0 12 0 L 12 0 L 12 160 L 12 160 Q 0 160 0 148 Z" fill="#ce422b" />
+  <!-- Gothic Wing & Cross Watermark Background -->
+  <g transform="translate(710, 85) scale(1.4)" opacity="0.04" fill="#ffffff">
+    <path d="M-10,-20 C-40,-70 -120,-80 -180,-40 C-140,-10 -90,20 -40,30 C-30,10 -20,0 -10,-20 Z" />
+    <path d="M10,-20 C40,-70 120,-80 180,-40 C140,-10 90,20 40,30 C30,10 20,0 10,-20 Z" />
+    <circle cx="0" cy="-55" r="10" fill="none" stroke="#ffffff" stroke-width="2" />
+    <line x1="0" y1="-45" x2="0" y2="40" stroke="#ffffff" stroke-width="2" />
+    <line x1="-20" y1="-15" x2="20" y2="-15" stroke="#ffffff" stroke-width="2" />
+  </g>
 
-  <!-- Background Watermark Symbol -->
-  <g transform="translate(730, 95) rotate(-15)" opacity="0.04" fill="#ce422b">
-    <circle cx="0" cy="0" r="70" />
-    <path d="M-30,-30 L30,30 L10,50 L-50,-10 Z" />
+  <!-- Sharp Gothic Framing Corners -->
+  <g stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.2" fill="none" font-family="'JetBrains Mono', monospace" font-size="8.5" letter-spacing="1.5">
+    <!-- Top-Left -->
+    <path d="M 18 28 L 18 16 L 30 16" />
+    <text x="36" y="22" fill="rgba(255,255,255,0.3)" stroke="none">RELIC.01</text>
+
+    <!-- Top-Right -->
+    <path d="M 782 28 L 782 16 L 770 16" />
+    <text x="690" y="22" fill="rgba(206,66,43,0.7)" stroke="none">[ v1.2.0 ]</text>
+
+    <!-- Bottom-Left -->
+    <path d="M 18 142 L 18 154 L 30 154" />
+    <text x="36" y="152" fill="rgba(255,255,255,0.25)" stroke="none">0xCE422B</text>
+
+    <!-- Bottom-Right -->
+    <path d="M 782 142 L 782 154 L 770 154" />
+    <text x="705" y="152" fill="rgba(255,255,255,0.25)" stroke="none">ARCHIVE</text>
   </g>
 
   <!-- Card Content -->
   <g transform="translate(36, 0)">
-    <!-- Header: Title + Tag -->
-    <g transform="translate(0, 42)">
-      <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff" letter-spacing="-0.3">
-        🎨 ChromaDrop
+    <!-- Title with Gothic Cross and Red Chromatic Glitch -->
+    <g transform="translate(0, 56)">
+      <!-- Glitch Red Offset -->
+      <text font-family="'JetBrains Mono', 'Cinzel', serif, monospace" font-size="20" font-weight="900" fill="#ce422b" opacity="0.35" letter-spacing="4">
+        † CHROMADROP
       </text>
-
-      <!-- Version Badge -->
-      <g transform="translate(165, -16)">
-        <rect width="54" height="20" rx="4" fill="rgba(206, 66, 43, 0.15)" stroke="rgba(206, 66, 43, 0.45)" stroke-width="1" />
-        <text x="27" y="14" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#ff7a5c" text-anchor="middle">v1.2.0</text>
-      </g>
+      <!-- Main Title -->
+      <text x="-1" y="-1" font-family="'JetBrains Mono', 'Cinzel', serif, monospace" font-size="20" font-weight="900" fill="#f8fafc" letter-spacing="4">
+        † CHROMADROP
+      </text>
     </g>
 
-    <!-- Description -->
-    <text x="0" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="rgba(255, 255, 255, 0.7)">
-      Desktop screen eyedropper, OKLCH color engine, WCAG 2.1 inspector &amp; gradient studio.
+    <!-- Gothic Subtitle -->
+    <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="rgba(255, 255, 255, 0.4)" letter-spacing="2">
+      [ DESKTOP EYEDROPPER // OKLCH ENGINE // WCAG SUITE ]
     </text>
 
-    <!-- Tech Badges -->
-    <g transform="translate(0, 110)" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10.5">
-      <!-- Tauri Badge -->
-      <rect x="0" y="0" width="76" height="24" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.09)" />
-      <text x="11" y="16" fill="#94a3b8">Tauri v2</text>
+    <!-- Description -->
+    <text x="0" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="rgba(255, 255, 255, 0.65)">
+      Ultra-fast screen pixel inspector, OKLCH converter &amp; live gradient studio.
+    </text>
 
-      <!-- Rust Badge -->
-      <rect x="84" y="0" width="56" height="24" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.09)" />
-      <text x="96" y="16" fill="#dea584">Rust</text>
+    <!-- Monospaced Boxed Tech Tags -->
+    <g transform="translate(0, 124)" font-family="'JetBrains Mono', monospace" font-size="9.5" letter-spacing="1">
+      <rect x="0" y="0" width="82" height="20" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+      <text x="10" y="14" fill="#cbd5e1">TAURI.V2</text>
 
-      <!-- Vue Badge -->
-      <rect x="148" y="0" width="60" height="24" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.09)" />
-      <text x="159" y="16" fill="#4fc08d">Vue 3</text>
+      <rect x="90" y="0" width="58" height="20" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+      <text x="100" y="14" fill="#dea584">RUST</text>
 
-      <!-- Tailwind Badge -->
-      <rect x="216" y="0" width="75" height="24" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.09)" />
-      <text x="227" y="16" fill="#38b2ac">Tailwind</text>
+      <rect x="156" y="0" width="62" height="20" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+      <text x="166" y="14" fill="#4fc08d">VUE.3</text>
+
+      <rect x="226" y="0" width="86" height="20" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+      <text x="236" y="14" fill="#38b2ac">TAILWIND</text>
     </g>
   </g>
 
   <!-- Scanlines Overlay -->
-  <rect width="800" height="160" rx="12" fill="url(#scanlines)" pointer-events="none" />
+  <rect width="800" height="170" fill="url(#scanlinesG1)" pointer-events="none" />
 </svg>
