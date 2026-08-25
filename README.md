@@ -16,15 +16,21 @@
 
 ### 01 // Projects
 
-#### 🎨 [ChromaDrop](https://github.com/thund3r1331/chromadrop)
-> **Desktop screen eyedropper, OKLCH color engine, WCAG 2.1 inspector & gradient studio.**  
-> `Tauri v2` • `Rust` • `Vue 3` • `Tailwind CSS`
+<div align="center">
+
+  <a href="https://github.com/thund3r1331/chromadrop">
+    <img src="assets/card-chromadrop.svg" alt="ChromaDrop" width="100%" />
+  </a>
+
+  <br/><br/>
+
+  <a href="https://github.com/thund3r1331/weather-cli">
+    <img src="assets/card-weather.svg" alt="weather-cli" width="100%" />
+  </a>
+
+</div>
 
 <br/>
-
-#### ⛅ [weather-cli](https://github.com/thund3r1331/weather-cli)
-> **Lightweight terminal weather client with real-time WMO decoding, ASCII art & ANSI styling.**  
-> `Node.js` • `Open-Meteo API` • `CLI`
 
 ---
 
