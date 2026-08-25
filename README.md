@@ -19,13 +19,13 @@
 <div align="center">
 
   <a href="https://github.com/thund3r1331/chromadrop">
-    <img src="assets/card-chromadrop.svg" alt="ChromaDrop" width="100%" />
+    <img src="assets/relic-chromadrop.svg" alt="ChromaDrop" width="100%" />
   </a>
 
   <br/><br/>
 
   <a href="https://github.com/thund3r1331/weather-cli">
-    <img src="assets/card-weather.svg" alt="weather-cli" width="100%" />
+    <img src="assets/relic-weather.svg" alt="weather-cli" width="100%" />
   </a>
 
 </div>
