@@ -1,16 +1,12 @@
 <div align="center">
 
-  <h1>Hey, I'm thund3r ⚡</h1>
-  
-  <p>
-    <strong>Building fast desktop applications, Rust tooling & modern web experiments.</strong>
-  </p>
+  <img src="banner.svg" alt="thund3r banner" width="100%" />
 
-  <br/>
+  <br/><br/>
 
-  <!-- Трендовые неоновые иконки технологий -->
+  <!-- Dark Tech Stack Badges -->
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=rust,ts,vue,tauri,tailwind,nodejs,html,css,git,linux,vscode&theme=dark" alt="My Skills" />
+    <img src="https://skillicons.dev/icons?i=rust,ts,vue,tauri,tailwind,nodejs,html,css,git,linux,vscode&theme=dark" alt="Skills" />
   </a>
 
 </div>
@@ -19,14 +15,14 @@
 
 ---
 
-### ⚡ Featured Projects
+### † Featured Relics
 
 <table>
   <tr>
     <td width="50%">
       <h3 align="center"><a href="https://github.com/thund3r1331/chromadrop">🎨 ChromaDrop</a></h3>
       <p align="center">
-        Ultra-fast desktop screen eyedropper, OKLCH converter, WCAG 2.1 accessibility suite & gradient studio for developers.
+        Ultra-fast desktop screen eyedropper, OKLCH converter, WCAG 2.1 accessibility suite & gradient studio.
       </p>
       <p align="center">
         <code>Tauri v2</code> • <code>Rust</code> • <code>Vue 3</code> • <code>Tailwind</code>
@@ -46,19 +42,35 @@
 
 ---
 
-### 🛠️ About Me
+### † Soul Schema
 
 ```rust
-struct Developer {
-    name: &'static str,
-    focus: Vec<&'static str>,
-    stack: Vec<&'static str>,
-    currently_building: &'static str,
+struct Soul {
+    alias: &'static str,
+    status: &'static str,
+    affinity: Vec<&'static str>,
+    obsessions: Vec<&'static str>,
 }
 
-let thund3r = Developer {
-    name: "thund3r",
-    focus: vec!["Desktop Apps", "Rust Tooling", "Frontend Architecture"],
-    stack: vec!["Rust", "TypeScript", "Vue 3", "Tauri", "Node.js", "Tailwind"],
-    currently_building: "ChromaDrop & CLI utilities",
+let thund3r = Soul {
+    alias: "thund3r",
+    status: "lost in the memory heap",
+    affinity: vec!["Rust", "Systems", "Tauri", "Vue 3", "Creative Coding"],
+    obsessions: vec!["ChromaDrop", "Terminal UIs", "Low-Level Performance"],
 };
+```
+
+---
+
+### † Void Telemetry
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=thund3r1331&show_icons=true&theme=tokyonight&hide_border=true&bg_color=050508&title_color=CE422B&icon_color=CE422B&text_color=94A3B8" height="150" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=thund3r1331&layout=compact&theme=tokyonight&hide_border=true&bg_color=050508&title_color=CE422B&text_color=94A3B8" height="150" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=thund3r1331&label=%E2%80%A0%20Visitors&color=ce422b&style=flat-square" alt="Visitors" />
+</div>

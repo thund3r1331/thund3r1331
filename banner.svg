@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="voidBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050508" />
+      <stop offset="50%" stop-color="#0a0a0f" />
+      <stop offset="100%" stop-color="#040406" />
+    </linearGradient>
+
+    <!-- Ghost Glow -->
+    <radialGradient id="ghostGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ce422b" stop-opacity="0.18" />
+      <stop offset="40%" stop-color="#6366f1" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="centerAura" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" width="100%" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="1200" y2="0" stroke="#000000" stroke-width="2" opacity="0.4" />
+      <line x1="0" y1="2" x2="1200" y2="2" stroke="#ffffff" stroke-width="0.5" opacity="0.03" />
+    </pattern>
+
+    <!-- Noise / Wire Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.025)" stroke-width="0.75" />
+      <circle cx="0" cy="0" r="1" fill="rgba(255,255,255,0.08)" />
+    </pattern>
+
+    <!-- Blood Red Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="50%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+
+    <!-- Gothic Cross Symbol -->
+    <g id="gothCross">
+      <line x1="0" y1="-18" x2="0" y2="22" stroke="currentColor" stroke-width="1.5" />
+      <line x1="-12" y1="-6" x2="12" y2="-6" stroke="currentColor" stroke-width="1.5" />
+      <circle cx="0" cy="-6" r="3" fill="none" stroke="currentColor" stroke-width="1" />
+    </g>
+
+    <!-- Wing Motif -->
+    <path id="wing" d="M0,0 C20,-30 60,-40 100,-30 C80,-10 70,10 60,30 C45,15 30,5 0,0 Z" fill="currentColor" opacity="0.15" />
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="380" fill="url(#voidBg)" />
+  <rect width="1200" height="380" fill="url(#grid)" />
+  <rect width="1200" height="380" fill="url(#ghostGlow)" />
+  <rect width="1200" height="380" fill="url(#centerAura)" />
+
+  <!-- Atmospheric Wing Silhouette Watermark (Matching Avatar) -->
+  <g transform="translate(600, 190) scale(2.2)" opacity="0.04" fill="#ffffff">
+    <!-- Left Wing -->
+    <path d="M-10,-20 C-40,-70 -120,-80 -180,-40 C-140,-10 -90,20 -40,30 C-30,10 -20,0 -10,-20 Z" />
+    <!-- Right Wing -->
+    <path d="M10,-20 C40,-70 120,-80 180,-40 C140,-10 90,20 40,30 C30,10 20,0 10,-20 Z" />
+    <!-- Center Halo / Cross -->
+    <circle cx="0" cy="-60" r="14" fill="none" stroke="#ffffff" stroke-width="2" />
+    <line x1="0" y1="-45" x2="0" y2="40" stroke="#ffffff" stroke-width="3" />
+    <line x1="-25" y1="-15" x2="25" y2="-15" stroke="#ffffff" stroke-width="3" />
+  </g>
+
+  <!-- Aesthetic Framing Corners -->
+  <g stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.2" fill="none">
+    <!-- Top-Left -->
+    <path d="M 30 50 L 30 30 L 50 30" />
+    <text x="60" y="36" font-family="'Courier New', monospace" font-size="10" fill="rgba(255,255,255,0.3)" letter-spacing="2">SYS//0x00_VOID</text>
+    
+    <!-- Top-Right -->
+    <path d="M 1170 50 L 1170 30 L 1150 30" />
+    <text x="1050" y="36" font-family="'Courier New', monospace" font-size="10" fill="rgba(255,255,255,0.3)" letter-spacing="2">STATUS: DISCONNECTED</text>
+
+    <!-- Bottom-Left -->
+    <path d="M 30 330 L 30 350 L 50 350" />
+    <text x="30" y="365" font-family="'Courier New', monospace" font-size="9" fill="rgba(206,66,43,0.6)" letter-spacing="1">† MEMORY_CORRUPTION_DETECTED</text>
+
+    <!-- Bottom-Right -->
+    <path d="M 1170 330 L 1170 350 L 1150 350" />
+    <text x="1065" y="365" font-family="'Courier New', monospace" font-size="9" fill="rgba(255,255,255,0.25)" letter-spacing="1">404 // REALITY_NOT_FOUND</text>
+  </g>
+
+  <!-- Grunge Ambient Floating Particles / Stars -->
+  <g fill="#ffffff">
+    <circle cx="180" cy="90" r="1" opacity="0.4" />
+    <circle cx="240" cy="280" r="1.5" opacity="0.2" />
+    <circle cx="380" cy="70" r="0.8" opacity="0.5" />
+    <circle cx="850" cy="110" r="1" opacity="0.3" />
+    <circle cx="980" cy="290" r="1.5" opacity="0.4" />
+    <circle cx="1040" cy="80" r="0.8" opacity="0.6" />
+    <circle cx="150" cy="220" r="1" opacity="0.2" />
+    <circle cx="1080" cy="210" r="1.2" opacity="0.3" />
+  </g>
+
+  <!-- Distressed Decorative Horizontal Lines -->
+  <line x1="200" y1="190" x2="420" y2="190" stroke="rgba(255, 255, 255, 0.08)" stroke-dasharray="3 6" />
+  <line x1="780" y1="190" x2="1000" y2="190" stroke="rgba(255, 255, 255, 0.08)" stroke-dasharray="3 6" />
+
+  <!-- Center Typography -->
+  <g text-anchor="middle">
+    <!-- Japanese Goth Subtitle Accent -->
+    <text x="600" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="400" fill="rgba(255, 255, 255, 0.35)" letter-spacing="8">
+      「 虚 無 と コ ー ド 」
+    </text>
+
+    <!-- Glitch Chromatic Offset Layer (Cyan) -->
+    <text x="598" y="196" font-family="'Cinzel', 'Times New Roman', serif" font-size="52" font-weight="900" fill="#00f0ff" opacity="0.12" letter-spacing="18">
+      † THUND3R †
+    </text>
+
+    <!-- Glitch Chromatic Offset Layer (Crimson) -->
+    <text x="602" y="194" font-family="'Cinzel', 'Times New Roman', serif" font-size="52" font-weight="900" fill="#ff2a5f" opacity="0.12" letter-spacing="18">
+      † THUND3R †
+    </text>
+
+    <!-- Main Title -->
+    <text x="600" y="195" font-family="'Cinzel', 'Times New Roman', 'Georgia', serif" font-size="52" font-weight="900" fill="url(#textGrad)" letter-spacing="18">
+      † THUND3R †
+    </text>
+
+    <!-- Ethereal Tagline -->
+    <text x="600" y="240" font-family="'Courier New', monospace" font-size="13" fill="rgba(255, 255, 255, 0.6)" letter-spacing="4">
+      [ lost in the void • compiling digital relics ]
+    </text>
+
+    <!-- Tech Stack Monospaced Badges -->
+    <g transform="translate(600, 275)" font-family="'Courier New', monospace" font-size="11" fill="rgba(148, 163, 184, 0.7)" letter-spacing="2">
+      <text x="0" y="0">RUST // TAURI // VUE // SYSTEMS</text>
+    </g>
+  </g>
+
+  <!-- CRT Scanlines Overlay -->
+  <rect width="1200" height="380" fill="url(#scanlines)" pointer-events="none" />
+</svg>
