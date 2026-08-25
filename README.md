@@ -49,7 +49,7 @@ let thund3r = Profile {
 ### 03 // Activity
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=thund3r1331&show_icons=true&theme=tokyonight&hide_border=true&bg_color=070709&title_color=CE422B&icon_color=CE422B&text_color=94A3B8" width="95%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=thund3r1331&theme=tokyonight&background=070709&border=1A1C23&stroke=1A1C23&ring=CE422B&fire=CE422B&currStreakLabel=CE422B&sideNums=E2E8F0&sideLabels=94A3B8&dates=64748B" alt="GitHub Streak" width="95%" />
 </div>
 
 <br/>
